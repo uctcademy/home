@@ -1,0 +1,31 @@
+###########################################
+
+###########################################
+ figlet -f slant "CyberOps" | lolcat
+ toilet -f term -F border " Codename: Compaq " | lolcat
+###########################################
+
+###########################################
+ echo "Welcome, $(whoami)!" | lolcat
+ echo "🏗️ Architecture: $(uname -m)" | lolcat
+ echo "📂 Directory: $(pwd)" | lolcat
+ echo "🧠 Memory Usage:" && free -h | lolcat
+ echo "📅 Date: $(date)" | lolcat
+###########################################
+
+###########################################
+function hacker_quote() {
+    quotes=("Hack the planet!"
+            "There is no patch for human stupidity."
+            "I am root."
+            "The quieter you become, the more you can hear."
+            "Code is like humor. When you have to explain it, it’s bad."
+            "Stay out of trouble... and if you can't, get caught doing something cool.")
+
+    echo -e "\e[1;35m$(shuf -n1 -e "${quotes[@]}")\e[0m"
+}
+hacker_quote
+###########################################
+
+###########################################
+
