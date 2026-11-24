@@ -1,0 +1,77 @@
+############################################
+# Option 1: Kali-style prompt
+# PS1='┌──(\[\e[1;31m\]kali\[\e[0m\]㉿\[\e[1;34m\]localhost\[\e[0m\])-[\[\e[1;32m\]\w\[\e[0m\]]
+# └─\$ '
+###########################################
+# Option 2: Parrot-style prompt
+ PS1='┌──(\[\e[1;32m\]termux\[\e[0m\]㉿\[\e[1;34m\]localhost\[\e[0m\])-[\[\e[1;36m\]\w\[\e[0m\]]
+└─\$ '
+############################################
+# Install first:
+# pkg install pv
+function animated_motd() {
+    echo -e "\n🧬 Launching Neural Access Protocol...\n" | pv -qL 15
+    echo "Connecting to Phantom-HeX node..." | pv -qL 20
+    sleep 0.5
+    echo "Loading modules: [■■■□□□□] 60%" | pv -qL 25
+    sleep 0.5
+    echo "Initializing root bypass kernel..." | pv -qL 22
+    sleep 0.3
+    echo "✔ Access granted. Welcome, $(whoami)." | pv -qL 30
+    echo ""
+}
+animated_motd
+############################################
+# bash ~/ai.sh
+############################################
+## Banner style
+# echo -e "\e[0m"
+# echo -e "\e[1,30m"
+# echo -e "\e[1,31m"
+ echo -e "\e[1;32m"
+ figlet -f slant "CyberOps" | lolcat
+ toilet -f term -F border " Codename: Phantom-HeX " | lolcat
+# echo -e "\e[0m"
+# echo -e "\e[1,30m"
+# echo -e "\e[1,31m"
+# echo -e "\e[1;32m"
+############################################
+echo -e "\e[1;32m"
+echo "Welcome, $(whoami)!" | lolcat
+echo "🏗️ Architecture: $(uname -m)" | lolcat
+echo "📂 Directory: $(pwd)" | lolcat
+echo "🧠 Memory Usage:" && free -h | lolcat
+echo "📅 Date: $(date)" | lolcat
+##########################################$
+# Add this to .bashrc
+function hacker_quote() {
+    quotes=("Hack the planet!"
+            "There is no patch for human stupidity."
+            "I am root."
+            "The quieter you become, the more you can hear."
+            "Code is like humor. When you have to explain it, it’s bad."
+            "Stay out of trouble... and if you can't, get caught doing something cool.")
+
+    echo -e "\e[1;35m$(shuf -n1 -e "${quotes[@]}")\e[0m"
+}
+hacker_quote
+#############################################
+# fortune | cowsay -f $(ls /data/data/com.termux/files/usr/share/cowsay/cows/ | shuf -n 1) | lolcat
+######$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+# bash ~/ai.sh
+# alias boom='termux-media-player play ~/storage/music/hack.mp3'
+###############################################################
+#function cyber_progress_bar() {
+#    echo -ne "\e[1;32mInitializing CyberOps Engine:\e[0m\n"
+#    bar="▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓"
+#    i=0
+#    while [ $i -le 50 ]; do
+#        printf "\r\e[1;36m[%-50s] %d%%\e[0m" "${bar:0:$i}" $((2*i))
+#        sleep 0.03
+#        ((i++))
+#    done
+#    echo -e "\n✔️  System Ready.\n" | lolcat
+#}
+# cyber_progress_bar
+#################################################################
+
